@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+    <style>
+
+        .axis {
+            font: 10px sans-serif;
+        }
+
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: #000;
+            shape-rendering: crispEdges;
+        }
+
+        .label {
+            font-size: 13px;
+            background-color: red;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"></script>-->
+<!--<script src="https://d3js.org/d3-color.v5.js"></script>-->
+<!--<script src="https://d3js.org/d3.v5.min.js"></script>-->
+
+<script>
+
+    var LOW_COLOR = '#ffffff';
+    var HIGH_COLOR = '#ffaa00';
+    var N_STEPS = '5';
+
+    // debugger;
+    // d3.interpolateLab("white", "red").domain(1,100)
+    // function linear_scale(l_color, high_color, n_steps) {
+    //     var color = d3.scale.linear()
+    //         .domain([0, n_steps - 1])
+    //         .range([low_color, high_color])
+    // }
+    // var s = linear_scale(LOW_COLOR, HIGH_COLOR, N_STEPS);
+
+    function getColorValueFromSmittetCount(smittet) {
+        if (smittet == -1) {
+            return 'white';
+        } else if (smittet > -1 && smittet <= 50) {
+            return '#ffeabf';
+        } else if (smittet > 50 && smittet <= 100) {
+            return '#ffd580';
+        } else if (smittet > 100 && smittet <= 150) {
+            return '#ffaa00';
+        } else if (smittet > 150 && smittet <= 200) {
+            return '#ffaa00';
+        } else if (smittet > 200 && smittet <= 250) {
+            return '#ffaa00';
+        } else if (smittet > 250) {
+            return '#ffaa00';
+        }
+    }
+
+    var VERTICAL_BAR_WIDTH = 20;
+
+    var data1 = [{
+        date: '23/3-2020',
+        value: 100
+    },
+        {
+            date: '24/3-2020',
+            value: 50
+        }]
+
+    var data2 = [{
+        date: '23/3-2020',
+        value: 500
+    },
+        {
+            date: '24/3-2020',
+            value: 75
+        }]
+
+    var margin = {top: 20, right: 20, bottom: 70, left: 40};
+    var width = (VERTICAL_BAR_WIDTH * data1.length); //  - margin.left - margin.right,
+    var height = 300 - margin.top - margin.bottom;
+
+    var DATE_FORMAT = "%d/%m-%Y";
+
+    // Parse the date / time
+    var parseDate = d3.time.format(DATE_FORMAT).parse;
+
+    var x = d3.scale.ordinal().rangeRoundBands([0, width], .05);
+
+    var y = d3.scale.linear().range([height, 0]);
+
+    var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("bottom")
+        .tickFormat(d3.time.format(DATE_FORMAT));
+
+    var yAxis = d3.svg.axis()
+        .scale(y)
+        .orient("left")
+        .ticks(10);
+
+    var svg = d3.select("body").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
+
+    // d3.csv("bar_data.csv", function (error, data) {
+
+    function barchart(dta) {
+
+        var data = [];
+
+        dta.forEach(function (d) {
+            dd = {};
+            dd.date = parseDate(d.date);
+            dd.value = d.value;
+            data.push(dd);
+        });
+
+        console.log(data);
+
+        x.domain(data.map(function (d) {
+            return d.date;
+        }));
+
+        y.domain([0, d3.max(data, function (d) {
+            return d.value;
+        })]);
+
+        // svg.append("g")
+        //     .attr("class", "x axis")
+        //     .attr("transform", "translate(0," + height + ")")
+        //     .call(xAxis)
+        //     .selectAll("text")
+        //     .style("text-anchor", "end")
+        //     .attr("dx", "-.8em")
+        //     .attr("dy", "-.55em")
+        //     .attr("transform", "rotate(-90)");
+
+        var bars = svg.selectAll(".bar")
+            .data(data)
+            .enter()
+
+        // update bars
+        bars.append("rect")
+            .attr("class", "bar")
+            .style("fill", function (d) {
+                console.log(d.value, ' -> ', getColorValueFromSmittetCount(d.value));
+                return getColorValueFromSmittetCount(d.value)
+            })
+            .attr("x", function (d) {
+                return x(d.date);
+            })
+            .attr("width", x.rangeBand())
+            .attr("y", function (d) {
+                return y(d.value);
+            })
+            .attr("height", function (d) {
+                return height - y(d.value);
+            })
+
+        //add a value label to the top of each bar
+        bars.append("text")
+            .attr("class", "label")
+            .attr("x", function (d) {
+                console.log('d', x(d.date));
+                return x(d.date)
+            })
+            //x position is 3 pixels to the right of the bar
+            .attr("y", function (d) {
+                console.log('y', y(d.value))
+                return y(d.value) - 8;
+            })
+            .text(function (d) {
+                return d.value;
+            });
+
+    }
+
+    barchart(data2);
+
+</script>
+
+<button onclick="barchart(data1);">VALUES1</button>
+<button onclick="barchart(data2);">VALUES2</button>
+
+</body>

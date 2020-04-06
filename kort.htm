@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)https://test-coronasmitte.spatialsuite.dk/html/kort.html -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <!--
+    <script type="text/javascript" src="/js/standard/lib/jquery-ui/1.12.1/jquery-ui.min.js" charset="ISO-8859-1">
+    <link type="text/css" rel="Stylesheet" href="/js/standard/lib/jquery-ui/1.12.1/jquery-ui.min.css">
+    -->
+	<style>
+        table tr > td:nth-child(2) {
+            display: inline-block;
+        }
+    </style>
+	<script src="https://d3js.org/d3.v4.js"></script>
+    <script type="text/javascript"
+            src="https://test-coronasmitte.spatialsuite.dk/clientapi/minimap2/mmloader.js">
+    </script>
+	<script type="text/javascript" src="./js/constants.js"></script>
+	<script type="text/javascript" src="./js/timeseries.js"></script>
+    <script type="text/javascript" src="./js/kort.js"></script>
+    <link rel="stylesheet" href="./kort_files/ol.css">
+    <link rel="stylesheet" href="./kort_files/minimap.css">
+    <link rel="stylesheet" href="./css/kort.css">
+    <link rel="stylesheet" href="./css/slider.css">
+	<link rel="stylesheet" href="./css/graph.css">
+</head>
+<body>
+<div class="header">
+	<h2>
+		Antal COVID-19 smittede fordelt på kommuner per <span id="slider-label">1/1-2019</span>
+	</h2>
+</div>
+	<div class="row">
+		<div class="column">
+			<div id="map-wrapper">
+				<div class="wrap" role="date" aria-label="multi thumb slider with ruler">
+					<input id="b" type="range" min="0" max="0" value="4" aria-valuetext="4" list="l"/>
+					<output for="b" aria-hidden="true" id="output" label="0"></output>
+					<datalist id="l">
+					</datalist>
+				</div>
+				<div id="minimapbody">
+				</div>
+				<div id="timeseries-container">
+					<div id="timeseries"></div>
+				</div>
+			</div>
+		</div>
+		<div class="column">
+			<div id="oversigt"></div>
+		</div>
+	</div>
+
+
+<script src="./js/slider.js"></script>
+
+</body>
+</html>

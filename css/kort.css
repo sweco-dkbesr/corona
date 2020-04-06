@@ -1,0 +1,68 @@
+#oversigt {
+    padding-top:75px;
+}
+#minimapbody {
+    width: 500px;
+    height: 500px;
+    padding-top:20px;
+}
+
+.pushed-label {
+    font-size: 14px;
+}
+
+div.sticky {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+#header {
+    height:40px;
+}
+
+@font-face {
+    font-family: Politi-Bold;
+    src: url(../fonts/Politi-Bold.eot);
+    src: url(../fonts/Politi-Bold.eot?#iefix) format("embedded-opentype"), url(../fonts/Politi-Bold.woff) format("woff"), url(../fonts/Politi-Bold.woff2) format("woff2"), url(../fonts/Politi-Bold.ttf) format("truetype"), url(../fonts/Politi-Bold.svg#52bc9fd504b621176d57f308965c98a4) format("svg");
+    font-style: normal;
+    font-weight: 700
+}
+
+
+
+body {
+    font-family: Arial;
+    /*font-family: 'Politi-Bold', Fallback, sans-serif;*/
+}
+
+h2 {
+    padding: 5px;
+}
+
+#map-wrapper {
+    width:500px;
+    height:500px;
+}
+
+.wrap {
+    padding: 30px 10px 0 10px
+}
+
+#map-wrapper input {
+    width:100%;
+}
+
+h3 {
+    color: #001e3c;
+    font-family: Politi-Bold,sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    margin-top: 0;
+}
+
+#timeseries {
+    height:180px;
+}

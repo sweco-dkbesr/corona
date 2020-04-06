@@ -1,0 +1,1309 @@
+.minimap :focus {
+    outline: thin dotted #4cb0e8
+}
+
+.mmPanelHeader {
+    background-color: #e2e0da;
+    text-align: left;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+.mmPanelContent {
+    background-color: #fff;
+    text-align: left;
+    padding: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    word-break: break-all
+}
+
+.mmPanelContent p, .mmPanelHeader p {
+    margin: 0px
+}
+
+.miniMapOverlayControl {
+    padding: 0px;
+    margin: 1px;
+    position: static;
+    border-radius: 0;
+    display: block
+}
+
+.miniMapOverlayControl > button {
+    background-color: #3f3f41;
+    cursor: pointer;
+    color: black;
+    margin: 0;
+    width: 26px;
+    height: 26px;
+    background-repeat: no-repeat;
+    border: hidden;
+    padding: 0
+}
+
+.miniMapOverlayControl > button:focus {
+    background-color: #4cb0e8;
+    outline-offset: -3px
+}
+
+.miniMapOverlayControl > button:hover {
+    background-color: #4cb0e8
+}
+
+.miniMapOverlayControlPressed {
+    border: 1px inset #999
+}
+
+.minimap {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: small;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: whitesmoke;
+    line-height: 1
+}
+
+.mmmessage, .mmlogin > div:first-child {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 48%
+}
+
+.mmlogin div:first-child input {
+    margin-top: 0px
+}
+
+.mmlogin input, .mmlogin button {
+    width: 180px;
+    margin-top: 10px;
+    padding: 5px
+}
+
+.mmlogin .mmloginerror input {
+    border: 1px solid red;
+    background-color: pink
+}
+
+.mmtopleft {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin-top: 11px;
+    margin-left: 11px;
+    z-index: 4
+}
+
+.mmtopright {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin-top: 11px;
+    margin-right: 11px;
+    z-index: 4;
+    text-align: right
+}
+
+.mmbottomleft {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    margin-left: 11px;
+    margin-bottom: 19px;
+    z-index: 3;
+    width: 30px
+}
+
+.mmbottomright {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    margin-right: 11px;
+    margin-bottom: 19px;
+    z-index: 3;
+    text-align: right
+}
+
+.mmbottomleft > .miniMapOverlayControl, .mmtopleft > .miniMapOverlayControl {
+    margin-left: 0px;
+    margin-right: 0px
+}
+
+.mmbottomright > .miniMapOverlayControl, .mmtopright > .miniMapOverlayControl {
+    margin-left: 0px;
+    margin-right: 0px
+}
+
+.mmtopleft > div:first-child, .mmtopright > div:first-child {
+    margin-top: 0px
+}
+
+.mmbottomleft > div:last-child, .mmbottomright > div:last-child {
+    margin-bottom: 0px
+}
+
+.mmtopleft, .mmtopright, .mmbottomleft, .mmbottomright {
+    pointer-events: none
+}
+
+.mmtopleft div, .mmtopright div, .mmbottomleft div, .mmbottomright div {
+    pointer-events: auto
+}
+
+.miniMapCopyrightControl {
+    bottom: 0px;
+    left: 0px;
+    font-size: 10px;
+    position: absolute;
+    width: 100%;
+    height: 14px;
+    padding: 0;
+    margin: 0;
+    overflow-x: auto;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: rgba(255, 255, 255, 0.7)
+}
+
+.mmHidden {
+    display: none
+}
+
+.miniMapLocationControl > button {
+    background-image: url("../images/buttons/controls/location_white24x24.png");
+    border: 1px solid #a4a4a6
+}
+
+.miniMapThemeSelectorToggle > button {
+    background-image: url("../images/buttons/controls/themeselector_white24x24.png");
+    border: 1px solid #a4a4a6
+}
+
+.miniMapOverlayControl > button {
+    border: 1px solid #a4a4a6
+}
+
+.miniMapOverlayControl > button.mmSelected {
+    background-color: #c73835
+}
+
+.minimap .ol-scale-line {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 2px;
+    border-radius: 0;
+    display: inline-block
+}
+
+.minimap .ol-scale-line-inner {
+    background-color: transparent;
+    color: black;
+    border-color: gray;
+    margin: 0
+}
+
+.minimap .ol-mouse-position {
+    top: inherit;
+    bottom: 18px;
+    font-size: 9px;
+    font-family: Helvetica, Arial, sans-serif
+}
+
+.minimap .ol-full-screen-true {
+    background-image: url("../images/buttons/controls/fullscreen_exit_white24x24.png");
+    color: transparent;
+    font-size: 0px;
+    border: 1px solid #a4a4a6;
+    border-radius: 0
+}
+
+.minimap .ol-full-screen-false {
+    background-image: url("../images/buttons/controls/fullscreen_white24x24.png");
+    color: transparent;
+    font-size: 0px;
+    border: 1px solid #a4a4a6;
+    border-radius: 0
+}
+
+.minimap .ol-zoom .ol-zoom-in {
+    background-image: url("../images/buttons/controls/zoom_in_white24x24.png");
+    color: transparent;
+    font-size: 0px;
+    border: 1px solid #a4a4a6;
+    border-radius: 0
+}
+
+.minimap .ol-zoom .ol-zoom-out {
+    background-image: url("../images/buttons/controls/zoom_out_white24x24.png");
+    color: transparent;
+    font-size: 0px;
+    border: 1px solid #a4a4a6;
+    border-radius: 0
+}
+
+.mmtopleft .ol-zoom {
+    margin-bottom: 2px
+}
+
+.minimap .ol-control {
+    background-color: transparent
+}
+
+.minimap .ol-dragbox-select-features {
+    border: 2px solid white
+}
+
+.minimap .ol-dragbox-select-features:after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    right: -2px;
+    top: -2px;
+    bottom: -2px;
+    border: 2px dashed black
+}
+
+.miniMapSearchControl {
+    position: relative;
+    background-color: #ffffff;
+    width: 300px;
+    height: 36px;
+    border: 1px solid #a4a4a6;
+    border-radius: 0;
+    z-index: 5
+}
+
+.miniMapSearchControl > div {
+    height: 100%;
+    padding: 0px 46px 0px 0px
+}
+
+.miniMapSearchControl > div.active {
+    border-color: blue
+}
+
+.mmsearchicon {
+    position: absolute;
+    height: 100%;
+    width: 35px;
+    top: 0px;
+    bottom: 0px;
+    right: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px
+}
+
+.mmsearchicon.search {
+    background-image: url("../images/search16x16.png")
+}
+
+.mmsearchicon.loading {
+    background-image: url("../images/loading20x20.gif")
+}
+
+.mmsearchicon.error {
+    background-image: url("../images/attention_icon16x16.png")
+}
+
+.mmsearchicon.remove {
+    background-image: url("../images/remove16x16.png");
+    cursor: pointer
+}
+
+.miniMapSearchControl input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0px 0px 0px 12px;
+    margin: 0px
+}
+
+.miniMapSearchControl input::-ms-clear {
+    display: none
+}
+
+.miniMapSearchControl ul {
+    background: none repeat scroll 0 0 #ffffff;
+    display: block;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    position: absolute;
+    top: 44px;
+    width: 100%
+}
+
+.miniMapSearchControl ul li {
+    background: inherit;
+    border-color: #ccc;
+    border-image: none;
+    border-style: solid;
+    border-width: 0 1px;
+    padding: 8px 12px;
+    text-align: left;
+    word-break: break-word;
+    list-style-type: none
+}
+
+.miniMapSearchControl ul li.selected {
+    background-color: #ebebeb;
+    cursor: pointer
+}
+
+.miniMapSearchControl ul li > span {
+    display: inline;
+    padding-left: 5px;
+    width: 100%;
+    line-height: 18px
+}
+
+.miniMapSearchControl ul li > img {
+    width: 16px;
+    height: 16px;
+    vertical-align: top
+}
+
+.miniMapSearchControl ul li:first-child {
+    border-radius: 0;
+    border-width: 1px 1px 0px 1px
+}
+
+.miniMapSearchControl ul li:last-child {
+    border-radius: 0;
+    border-width: 0 1px 1px
+}
+
+.miniMapThemeSelectorIconControl {
+    left: 10px;
+    top: 90px
+}
+
+.mmiconstate {
+    height: 44px;
+    width: 44px;
+    background-position: 16px center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin: 2px 2px 0px 2px;
+    background-color: #fff
+}
+
+.mmiconstate .mmon {
+    border: 1px solid #a4a4a6;
+    border-width: 2px;
+    opacity: 1
+}
+
+.mmiconstate .mmon.mmtloading, .mmiconstate .mmon.mmterror {
+    opacity: 0.5
+}
+
+.mmiconstate .mmoff {
+    border: 2px solid black;
+    opacity: 0.25
+}
+
+.mmiconstate .mmimglock {
+    background-image: url("../images/off_lock.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    position: relative;
+    height: 16px;
+    width: 16px;
+    top: -14px;
+    left: 30px
+}
+
+.mmloadstate {
+    background-image: none;
+    width: 42px;
+    height: 42px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: -46px;
+    margin-left: 2px
+}
+
+.mmloadstate.mmterror {
+    background-image: url("../images/exclamationred16x16.png")
+}
+
+.mmloadstate.mmtloading {
+    background-image: url("../images/loading20x20.gif")
+}
+
+.mmiconstatedivider {
+    height: 1px;
+    border-top: 1px solid #BBB;
+    margin-top: 3px;
+    margin-bottom: 3px
+}
+
+.miniMapThemeSelectorLegendControl {
+    overflow-y: auto;
+    z-index: 5;
+    min-width: 150px;
+    max-width: 300px;
+    border-radius: 0;
+    margin-top: 0px;
+    white-space: nowrap;
+    border: 1px solid #a4a4a6
+}
+
+.miniMapThemeSelectorLegendContent .miniMapThemeName {
+    width: calc(100% - 46px)
+}
+
+.miniMapThemeSelectorLegendContent .noLegend .miniMapThemeName {
+    width: calc(100% - 22px)
+}
+
+.miniMapThemeSelectorLegendContent .miniMapTheme > div {
+    cursor: pointer
+}
+
+.miniMapTheme > div {
+    vertical-align: middle;
+    display: inline-block
+}
+
+.miniMapTheme > div.miniMapThemeLegend {
+    display: inline
+}
+
+.miniMapThemeSelectorLegendControl .miniMapThemeLegend > div > img {
+    padding-left: 0px;
+    padding-right: 12px
+}
+
+.miniMapThemeSelectorLegendControl .miniMapThemeLegend > div {
+    cusor: pointer
+}
+
+.mminfopanel {
+    position: absolute;
+    z-index: 3;
+    width: calc(100% - 22px);
+    right: 0px;
+    bottom: 20px;
+    margin-right: 11px;
+    display: none;
+    background-color: whitesmoke
+}
+
+.mminfopanelheader {
+    background-color: #3f3f41;
+    padding: 5px
+}
+
+.mminfopanelheader > img {
+    float: right;
+    padding: 1px 1px 4px 6px
+}
+
+.mminfopanelcontent {
+    overflow-y: auto;
+    width: 100%
+}
+
+.viewpopup .mmPanelHeader p, .viewSimpleHeader p, .viewListHeader p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    margin-right: 5px;
+    width: calc(100% - 17px)
+}
+
+.viewpopup .mmPanelHeader h1, .viewpopup .mmPanelHeader h2, .viewpopup .mmPanelHeader h3, .viewpopup .mmPanelHeader h4, .viewpopup .mmPanelHeader h5, .viewpopup .mmPanelHeader h6, .viewSimpleHeader h1, .viewSimpleHeader h2, .viewSimpleHeader h3, .viewSimpleHeader h4, .viewSimpleHeader h5, .viewSimpleHeader h6, .viewListHeader h1, .viewListHeader h2, .viewListHeader h3, .viewListHeader h4, .viewListHeader h5, .viewListHeader h6 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block;
+    margin: 0px;
+    margin-right: 5px;
+    width: calc(100% - 17px)
+}
+
+.mmPanelContent {
+    word-break: keep-all
+}
+
+.presentationtable {
+    border-spacing: 0px
+}
+
+.viewPopupHeader > div.close, .viewSimpleHeader > div.close {
+    float: right;
+    height: 12px;
+    width: 12px;
+    cursor: pointer;
+    background-size: 12px 12px
+}
+
+.miniMapViewSimpleControl {
+    max-width: 300px;
+    min-width: 100px
+}
+
+.viewSimpleHeader > div.close {
+    background: url(../images/buttons/close_black12x12.png)
+}
+
+.viewSimpleContent {
+    max-height: 200px;
+    overflow-y: auto
+}
+
+.viewListHeader {
+    cursor: pointer;
+    white-space: nowrap;
+    margin-top: 4px
+}
+
+.viewListHeader > div.arrow {
+    height: 10px;
+    width: 12px;
+    cursor: pointer;
+    background: url(../images/buttons/arrow_down_black12x10.png);
+    display: inline-block
+}
+
+.viewListHeader.selected > div.arrow {
+    background: url(../images/buttons/arrow_up_black12x10.png)
+}
+
+.viewListContent {
+    display: none
+}
+
+.viewListHeader.mmSelected {
+    display: block
+}
+
+.viewListContent.mmPanelContentSelected {
+    display: block
+}
+
+.mmPanelContentSelected td a:before {
+    content: "> "
+}
+
+.infopanelClose {
+    height: 12px;
+    width: 12px;
+    float: right;
+    cursor: pointer;
+    background: url("../images/buttons/close_white12x12.png")
+}
+
+.viewpopup {
+    color: whitesmoke;
+    min-width: 100px;
+    max-width: 300px
+}
+
+.viewpopup a {
+    color: whitesmoke
+}
+
+.viewpopup .mmPanelHeader {
+    background-color: #3f3f41;
+    padding-top: 10px;
+    padding-bottom: 0px
+}
+
+.viewPopupHeader > div.close {
+    background: url(../images/buttons/close_white12x12.png)
+}
+
+.viewpopup .mmPanelContent {
+    background-color: #3f3f41;
+    padding-bottom: 10px;
+    padding-top: 0px
+}
+
+.viewpopup:after {
+    content: "";
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 0;
+    border-width: 15px 15px 0;
+    border-style: solid;
+    border-color: #3f3f41 transparent
+}
+
+.mmPanelHeader, .mmPanelContent, .miniMapSearchControl {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: small;
+    line-height: 1
+}
+
+.info-attachments {
+    user-select: none
+}
+
+.info-attachments > div {
+    position: relative;
+    text-align: center;
+    outline: 1px solid black;
+    display: table-cell;
+    vertical-align: middle;
+    height: 225px;
+    width: 260px
+}
+
+.info-attachments img {
+    max-width: 260px;
+    max-height: 225px;
+    object-fit: contain
+}
+
+.info-attachments > div > div:nth-child(2) {
+    position: absolute;
+    bottom: 50%;
+    left: 5px;
+    padding: 2px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: whitesmoke;
+    color: black;
+    cursor: pointer
+}
+
+.info-attachments > div > div:nth-child(3) {
+    position: absolute;
+    bottom: 50%;
+    right: 5px;
+    padding: 2px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: whitesmoke;
+    color: black;
+    cursor: pointer
+}
+
+.info-attachments > div > div:nth-child(4) {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    padding: 2px;
+    background-color: whitesmoke;
+    color: black;
+    cursor: pointer
+}
+
+.info-attachments > div > div:nth-child(5) {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    padding: 2px;
+    background-color: whitesmoke;
+    color: black
+}
+
+.info-attachments > div > div > a {
+    color: black;
+    text-decoration: none
+}
+
+.info-attachments > div > div > a:before {
+    content: none
+}
+
+.mmSnapStatus {
+    background-color: rgba(255, 255, 255, 0.7);
+    font-size: 10px;
+    width: 125px;
+    height: 11px;
+    padding: 2px;
+    text-align: left
+}
+
+.miniMapLegendControl {
+    max-width: 300px;
+    display: inline-block;
+    white-space: nowrap;
+    border: 1px solid #a4a4a6
+}
+
+.miniMapLegendControl .mmPanelHeader, .miniMapThemeSelectorLegendControl .mmPanelHeader {
+    padding-left: 12px;
+    border-radius: 0;
+    background-color: #3f3f41;
+    color: whitesmoke
+}
+
+.miniMapThemeList {
+    border-radius: 0px
+}
+
+.mmPanelHeader:first-child {
+    border-radius: 0
+}
+
+.miniMapThemeList:last-child {
+    border-radius: 0
+}
+
+.miniMapSingleLegend {
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: 16px
+}
+
+.miniMapSingleLegend img {
+    margin-top: 7px
+}
+
+.miniMapSingleLegend img.vectorPoint {
+    width: 24px;
+    height: 24px;
+    margin-top: 0px
+}
+
+.miniMapThemeName {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow-x: hidden;
+    height: 24px;
+    line-height: 24px;
+    background-position: right;
+    background-repeat: no-repeat;
+    text-indent: 4px;
+    width: calc(100% - 24px)
+}
+
+.miniMapThemeState {
+    height: 16px;
+    width: 16px;
+    margin-left: 6px
+}
+
+.miniMapThemeState.mmon {
+    background-image: url("../images/power_on.png")
+}
+
+.miniMapThemeState.mmoff {
+    background-image: url("../images/power_off.png")
+}
+
+.miniMapThemeState.mmoff.mmlock {
+    background-image: url("../images/off_lock.png")
+}
+
+.miniMapThemeState.mmon.mmlock {
+    background-image: url("../images/on_lock.png")
+}
+
+.miniMapThemeState.mmon.mmtloading {
+    background-image: url("../images/loading20x20.gif");
+    background-position: -2px
+}
+
+.miniMapThemeState.mmon.mmterror {
+    background-image: url("../images/exclamationred16x16.png")
+}
+
+.miniMapThemeLegend > div {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow-x: hidden;
+    height: 15px;
+    line-height: 15px;
+    font-size: 84%
+}
+
+.miniMapLegendControl .miniMapThemeLegend > div > img {
+    padding-left: 6px;
+    padding-right: 6px
+}
+
+.panZoom {
+    background-position: -103px -1px
+}
+
+.featureSelect {
+    background-position: -207px -1px
+}
+
+.boxselectTool {
+    background-position: -493px -1px
+}
+
+.componentDelete {
+    background-position: -1247px -1px
+}
+
+.zoomToTool {
+    background-position: -701px -1px
+}
+
+.drawFeaturePoint {
+    background-position: -259px -1px
+}
+
+.drawFeatureLine {
+    background-position: -51px -1px
+}
+
+.drawFeatureFreeLine {
+    background-position: -155px -1px
+}
+
+.drawFeaturePolygon, .drawFeaturePolygonAdvanced {
+    background-position: -26px -1px
+}
+
+.drawFeatureCircle {
+    background-position: -415px -1px
+}
+
+.drawFeatureText {
+    background-position: -441px -1px
+}
+
+.drawFeatureFreePolygon {
+    background-position: -129px -1px
+}
+
+.drawFeatureRegularPolygon {
+    background-position: -311px -1px
+}
+
+.drawFeatureCircleRadius {
+    background-position: -337px -1px
+}
+
+.drawFeatureBufferedline {
+    background-position: -649px -1px
+}
+
+.drawFeatureLineArrow {
+    background-position: -779px -1px
+}
+
+.drawFromPointQuery {
+    background-position: -727px -1px
+}
+
+.drawFeatureWKT {
+    background-position: -1039px -1px
+}
+
+.drawCloud {
+    background-position: -1065px -1px
+}
+
+.drawFromRectangleQuery {
+    background-position: -753px -1px
+}
+
+.drawFromPolygonQuery {
+    background-position: -1221px -1px
+}
+
+.featureMove {
+    background-position: -1px -1px
+}
+
+.featureRotate {
+    background-position: -1013px -1px
+}
+
+.featureModify {
+    background-position: -233px -1px
+}
+
+.featureResize {
+    background-position: -909px -1px
+}
+
+.featureTransform {
+    background-position: -1273px -1px
+}
+
+.featureDelete {
+    background-position: -285px -1px
+}
+
+.featureDeleteSelected {
+    background-position: -285px -1px
+}
+
+.featureBuffer {
+    background-position: -1091px -1px
+}
+
+.measureArea {
+    background-position: -363px -1px
+}
+
+.measureDistance {
+    background-position: -389px -1px
+}
+
+.measureFromPointQuery {
+    background-position: -1195px -1px
+}
+
+.bufferTool {
+    background-position: -467px -1px
+}
+
+.unionTool, .unionSelected {
+    background-position: -519px -1px
+}
+
+.differenceTool, .differenceSelected {
+    background-position: -545px -1px
+}
+
+.intersectionTool, .intersectionSelected {
+    background-position: -571px -1px
+}
+
+.clearTool {
+    background-position: -597px -1px
+}
+
+.copyTool {
+    background-position: -623px -1px
+}
+
+.copyFromDatasourceTool {
+    background-position: -623px -1px
+}
+
+.setPointDirection {
+    background-position: -805px -1px
+}
+
+.addSegmentAbsoluteXY {
+    background-position: -935px -1px
+}
+
+.addSegmentAbsoluteAngle {
+    background-position: -961px -1px
+}
+
+.addSegmentRelativeAngle {
+    background-position: -987px -1px
+}
+
+.finishSketch {
+    background-position: -883px -1px;
+    float: none !important
+}
+
+.redoSegment {
+    background-position: -831px -1px;
+    float: none !important
+}
+
+.undoSegment {
+    background-position: -857px -1px;
+    float: none !important
+}
+
+.deleteFeatures {
+    background-position: -597px -1px
+}
+
+.deleteFeaturesForce {
+    background-position: -597px -1px
+}
+
+.zoomToFeatures {
+    background-position: -701px -1px
+}
+
+.useNewTool {
+    background-position: -1143px -1px
+}
+
+.useOldTool {
+    background-position: -1117px -1px
+}
+
+.reverseDifferenceTool, .differenceReverseSelected {
+    background-position: -1169px -1px
+}
+
+.drawControls {
+    display: flex
+}
+
+.drawControls > div {
+    flex-basis: 50%
+}
+
+.drawControl.active {
+    background-color: #f1c02a;
+    border: 0
+}
+
+.drawControl.active:hover {
+    background-color: #e1b01a
+}
+
+.drawControl:hover {
+    background-color: #ddd
+}
+
+.drawControl.disabled {
+    filter: grayscale(100%);
+    opacity: 0.3
+}
+
+.drawControl {
+    background-image: url(../images/buttons/dtb/editing_tool_bar.png);
+    background-repeat: no-repeat;
+    background-color: #eee;
+    height: 22px;
+    margin: 1px;
+    width: 24px;
+    cursor: pointer;
+    border: 0
+}
+
+.drawToolDivider {
+    clear: both;
+    color: #555555
+}
+
+.drawToolBox h4 {
+    padding-top: 4px
+}
+
+.segmentControls div.segmentControl {
+    display: inline-block
+}
+
+.segmentControls div.segmentControl.withSettings {
+    display: block
+}
+
+.segmentControls div.segmentControl > * {
+    vertical-align: middle
+}
+
+.segmentControls .drawControl {
+    float: none
+}
+
+.styleSetting, .drawSetting {
+    display: block;
+    clear: both;
+    height: 24px
+}
+
+.drawSetting label, .styleSetting label {
+    float: left;
+    padding-top: 6px
+}
+
+.drawSetting > span, .styleSetting > span {
+    float: right;
+    margin: 5px
+}
+
+.drawSetting input, .drawSetting select, .styleSetting input, .styleSetting select, .drawSetting button, .styleSettings button {
+    width: auto;
+    height: 18px;
+    border: 1px solid darkgrey;
+    float: right;
+    margin-top: 2px;
+    padding-left: 2px
+}
+
+.drawSetting button, .styleSettings button {
+    margin-top: 1px;
+    height: 22px;
+    width: auto
+}
+
+.drawSetting input[type="checkbox"], .styleSetting input[type="checkbox"] {
+    width: 18px
+}
+
+.drawSetting input[type="text"], .styleSetting input[type="text"] {
+    text-align: left
+}
+
+.drawSetting input[type="color"], .styleSetting input[type="color"] {
+    width: 52px
+}
+
+.drawSetting input[type="range"], .styleSetting input[type="range"] {
+    width: 78px
+}
+
+.drawSetting input[type="number"], .styleSetting input[type="number"] {
+    text-align: right;
+    width: 90px
+}
+
+.drawSetting select, .styleSetting select {
+    height: 20px
+}
+
+.drawSetting textarea, .styleSetting textarea {
+    width: 164px;
+    resize: none;
+    float: right
+}
+
+.drawSetting.datasource {
+    padding-right: 0px
+}
+
+.drawSetting.datasource select, .drawSetting.datasource input {
+    width: 164px;
+    float: none;
+    height: auto;
+    max-width: none;
+    width: 100%
+}
+
+.drawSetting.datasource select {
+    border: 1px solid #a4a4a6;
+    padding: 3px 2px
+}
+
+.drawSetting.datasource input[type="radio"] {
+    width: auto;
+    height: 22px;
+    float: left
+}
+
+.drawSetting.datasource label {
+    padding: 6px 10px 6px 4px
+}
+
+.drawSetting.datasource .search-container {
+    clear: both
+}
+
+.drawSegmentControls button {
+    float: right;
+    margin-top: 2px
+}
+
+.segmentControls, .selectedActionControls, .drawSegmentControls {
+    margin-top: 8px
+}
+
+.segmentControls, .drawSettingsContainer, .drawSegmentControls, .snapControlsContainer, .geometryInfoContainer, .styleSettingsContainer, .styleSettings {
+    clear: both
+}
+
+.geometryInfoWkt a {
+    border: 1px solid #a4a4a6;
+    padding: 0 2px;
+    font-size: 0.75em;
+    cursor: pointer
+}
+
+table.geometryInfo tr.geometryInfoWkt td:last-child, table.geometryInfo tr.geometryInfoUnavailable td:last-child {
+    text-align: left;
+    padding-top: 2px
+}
+
+.geometryInfoUnavailable {
+    font-style: italic
+}
+
+table.geometryInfo {
+    width: 100%;
+    border-spacing: 0
+}
+
+table.geometryInfo td {
+    padding: 2px 0px
+}
+
+table.geometryInfo tr td:last-child {
+    text-align: right
+}
+
+.selectGeometryItems {
+    padding: 0px
+}
+
+.selectGeometryItems .drawControl {
+    float: left
+}
+
+.selectGeometryItem {
+    list-style-type: none
+}
+
+.selectGeometryHeading {
+    height: 28px
+}
+
+.selectGeometryHeading:hover {
+    background-color: #ddd
+}
+
+.selectGeometryHeading div:first-child {
+    float: left;
+    padding-top: 8px
+}
+
+.selectGeometryHeading div:last-child {
+    float: right;
+    margin: 3px
+}
+
+.gsh-popup {
+    position: absolute;
+    background-color: white;
+    -webkit-filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid #a4a4a6;
+    bottom: 12px;
+    left: -50px;
+    min-width: 182px;
+    z-index: 5
+}
+
+.gsh-popup:after, .gsh-popup:before {
+    top: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none
+}
+
+.gsh-popup:after {
+    border-top-color: white;
+    border-width: 10px;
+    left: 48px;
+    margin-left: -10px
+}
+
+.gsh-popup:before {
+    border-top-color: #cccccc;
+    border-width: 11px;
+    left: 48px;
+    margin-left: -11px
+}
+
+/*# sourceMappingURL=minimap.css.map */
